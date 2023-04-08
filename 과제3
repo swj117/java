@@ -1,0 +1,30 @@
+package study;
+
+import java.util.Scanner;
+class Book {
+String title, author;
+public Book(String title, String author) { 
+this.title = title;
+this.author = author;
+}
+}
+public class test {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+
+System.out.print("인원수>>");	
+int n = scanner.nextInt();
+Book [] book = new Book[n]; // Book 배열 선언
+
+for(int i=0; i<book.length; i++) {
+System.out.print("이름>>");
+String name = scanner.nextLine();
+System.out.print("전화번호>>");
+String number = scanner.nextLine();
+book[i] = new Book(name, number); // 배열 원소 객체 생성
+System.out.print("저장되었습니다.>>");
+}
+
+scanner.close();
+}
+}
